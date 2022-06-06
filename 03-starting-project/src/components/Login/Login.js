@@ -3,13 +3,22 @@ import React, { useState, useEffect } from "react";
 import Card from "../UI/Card/Card";
 import classes from "./Login.module.css";
 import Button from "../UI/Button/Button";
+//import { useReducer } from "react/cjs/react.production.min";
 
+// const emailReducer = (state, action) => {
+//   return { value: "", isValid: false };
+// };
 const Login = (props) => {
   const [enteredEmail, setEnteredEmail] = useState("");
   const [emailIsValid, setEmailIsValid] = useState();
   const [enteredPassword, setEnteredPassword] = useState("");
   const [passwordIsValid, setPasswordIsValid] = useState();
   const [formIsValid, setFormIsValid] = useState(false);
+
+  // const [emailState, dispatchEmail] = useReducer(emailReducer, {
+  //   value: "",
+  //   isValid: false,
+  // });
 
   useEffect(() => {
     const identifier = setTimeout(() => {
